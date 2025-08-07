@@ -1,0 +1,30 @@
+﻿<UserControl
+    x:Class="RYCBEditorX.ConPty.TerminalControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <RichTextBox
+            x:Name="OutputBox"
+            Background="Black"
+            FontFamily="Consolas"
+            FontSize="14"
+            Foreground="White"
+            IsReadOnly="True"
+            VerticalScrollBarVisibility="Auto" />
+
+        <TextBox
+            x:Name="InputBox"
+            Grid.Row="1"
+            Padding="5"
+            Background="#FF333333"
+            FontFamily="Consolas"
+            FontSize="14"
+            Foreground="White"
+            KeyDown="InputBox_KeyDown" />
+    </Grid>
+</UserControl>
